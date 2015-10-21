@@ -24,9 +24,18 @@
 					tmp_actor_code.set(d.actor_code, d);
 				});
 
+				unique_movie_data = [];
+				unique_actor_data = [];
+
 				tmp_movie_code.forEach(function(d) {
-					console.log(d);
-				})
+					unique_movie_data.push(tmp_movie_code.get(d));
+				});
+
+				tmp_actor_code.forEach(function(d, i) {
+					unique_actor_data.push(tmp_actor_code.get(d));
+				});
+
+				console.log(unique_movie_data);
 
 			});
 		</script>
