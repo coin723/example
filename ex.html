@@ -19,7 +19,7 @@
 				var tmp_movie_code = d3.map([]);
 				var tmp_actor_code = d3.map([]);
 
-				movieData.forEach(function(d,i) {
+				movieData.forEach(function(d, i) {
 					tmp_movie_code.set(d.movie_code, d);
 					tmp_actor_code.set(d.actor_code, d);
 				});
@@ -37,6 +37,21 @@
 
 				console.log(unique_movie_data);
 
+				nodes_movie = [];
+				nodes_actor = [];
+
+				unique_movie_data.forEach(function(d, i) {
+					var movie_node = {
+						x : 0,
+						y : i * 20
+					};
+
+					nodes_movie.push(movie_node);
+				});
+				console.log(nodes_movie);
+				unique_actor_data.forEach(function(d, i) {
+
+				});
 			});
 		</script>
 	</body>
